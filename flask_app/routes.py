@@ -1,10 +1,9 @@
-from flask import Flask, render_template, request,session
+from flask import render_template, request,session
 from keras.utils import pad_sequences
 from flask_app import app
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 import re,pickle,warnings
-from sklearn.feature_extraction.text import CountVectorizer
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 
