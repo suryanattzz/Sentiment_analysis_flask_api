@@ -1,0 +1,91 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: #71ecec;
+}
+
+main {
+  position: fixed;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  border-radius:10px;
+
+}
+
+h1 {
+  margin-bottom: 20px;
+  line-height: 1;
+  letter-spacing: -1px;
+  font-size: 3em;
+  color: #343A40;
+}
+
+.sentiment-text {
+  color: #d3575d;
+  font-weight: bold;
+}
+
+.prompt-buttons {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.prompt-buttons > button {
+  width: 200px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  background-color: #c0392b;
+  cursor: pointer;
+}
+.prompt-buttons > button:active {
+  border: 2px solid #000; /* Change the border color to black when the button is clicked */
+}
+
+.form-label {
+  display: inline;
+  font-weight: bold;
+}
+
+#div-textarea {
+  margin-top: 20px; /* Adjust as needed */
+}
+
+#form-input-textarea {
+  display: inline-block;
+  min-height: 100px;
+  height: max-content;
+  width: 100%; /* Take up full width */
+}
+
+.submit-button > input {
+  padding:10px;
+  border-radius:5px;
+  width:600px;
+  background-color: #bd4c51;
+  
+  border: #1a1515;
+}
+.output-box {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff; /* Adjust as needed */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust as needed */
+}
+
+.output-label {
+  font-weight: bold;
+}
+
+.output-value {
+  color: #d3575d; /* Adjust as needed */
+  font-weight: bold;
+  font-size: 1.2em;
+}
+

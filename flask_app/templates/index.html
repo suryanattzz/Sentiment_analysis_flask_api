@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Using Flask</title>
+    <!-- Bootstrap CDN CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Static CSS -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+
+<body>
+<!-- The main form section -->
+    <main class="analysis-input-box">
+        <h1>FIND THE <span class="sentiment-text">SENTIMENT</span><br />FROM YOUR INPUT.</h1>
+        <form method="post" action="/">
+            <!-- Choose Prompt Option -->
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <div class="prompt-buttons">
+                    <button type="button" id="btn-prompt-text" class="btn btn-dark" onclick="setInputType('text'); changeColor(this)">Text</button>
+                    <button type="button" id="btn-prompt-url" class="btn btn-dark" onclick="setInputType('movie'); changeColor(this)">Movie Reviews</button>
+                    <button type="button" id="btn-prompt-media" class="btn btn-dark" onclick="setInputType('tweet'); changeColor(this)">Tweets</button>
+                </div>
+            </div>
+            <input type="hidden" id="inputType" name="input_type" value="" />
+          <!-- Rest of the form -->
+
+    <input type="hidden" id="inputType" name="input_type" value="" />
+
+    <script>
+        function setInputType(type) {
+            document.getElementById('inputType').value = type;
+        }
+
+        function changeColor(button) {
+            // Remove the 'active' class from all buttons
+            var buttons = document.querySelectorAll('.prompt-buttons button');
+            buttons.forEach(function (btn) {
+                btn.classList.remove('active');
+            });
+
+            // Add the 'active' class to the clicked button
+            button.classList.add('active');
+        }
+    </script>
+
+    <!-- Prompt Input -->
+    <div class="form-group">
+        <!-- Enter Text Input -->
+        <div id="div-textarea">
+            <label for="form-input-textarea" class="form-label">Input Prompt:</label>
+            <textarea id="form-input-textarea" class="form-control" name="form-textarea" placeholder="Hello World! It's nice to meet you."></textarea>
+        </div>
+
+        <!-- Move this input inside the form -->
+        <input type="hidden" name="input_type" value="text">
+
+        <!-- Submit Button -->
+        <div class="submit-button">
+            <input type="submit" id="btn-find-sentiment" class="btn btn-success" value="Find Sentiment" />
+        </div>
+    </div>
+    </form>
+    {% if message %}
+        <div class="output-box">
+            <p class="output-value">{{ message }}</p>
+        </div>
+    {% elif text %}
+        <div class="output-box">
+            <p class="output-label">Entered Text:</p>
+            <p>{{ text }}</p>
+            {% if sentiment %}
+            <p class="output-label">Sentiment:</p>
+            <p class="output-value">{{ sentiment }}</p>
+            <p class="output-label">Prediction:</p>
+            <p class="output-value">{{ prediction }}</p>
+            {% endif %}
+        </div>
+        {% endif %}
+    </main>
+
+
+
+    <!-- Bootstrap CDN JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='scripts/scripts.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+
+</html>
