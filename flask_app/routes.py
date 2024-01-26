@@ -10,6 +10,7 @@ from nltk.corpus import stopwords
 
 warnings.filterwarnings("ignore")
 
+# Import models
 with open('models\\logistic_model_sentiment_30.pkl', 'rb') as model_file:
     loaded_logistic_model = pickle.load(model_file)
 with open('models\\count_vectorizer_ML_sentiment_30.pkl', 'rb') as vectorizer_file:
@@ -20,15 +21,16 @@ with open('models\\tokenizer_lstm_10_25.pickle', 'rb') as handle:
 with open('models\\tokenizer_lstm_tweet_20_37.pickle', 'rb') as handle:
     loaded_tokenizer_tweet = pickle.load(handle)
 
+#initializing Models and functions.
 tokenizer_tweet = loaded_tokenizer_tweet
 tokenizer_movie = loaded_tokenizer_movie
-
 
 lstm_model_tweet = load_model('models\\sentiment_rnn_tweet_20_37.h5')
 lstm_model_movie = load_model('models\\sentiment_rnn_movie_10_25 .h5')
 threshold_tweet = 0.37
 threshold_movie = 0.25
 
+#Preprocessing Texts.
 def func_1(text):
     stop_words=set(stopwords.words('english'))
     lemmatizer=WordNetLemmatizer()
@@ -53,7 +55,7 @@ def func_2(text):
 
     return lemmatized_string
 
-
+#Defining Models.
 def lstm_sentiment_model(text, model, tokenizer, threshold, maxlen):
     if max==400:
         new_text = func_2(text)
