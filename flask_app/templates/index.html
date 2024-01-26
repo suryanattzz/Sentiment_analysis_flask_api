@@ -26,22 +26,17 @@
                 </div>
             </div>
             <input type="hidden" id="inputType" name="input_type" value="" />
-          <!-- Rest of the form -->
-
-    <input type="hidden" id="inputType" name="input_type" value="" />
-
+            
     <script>
         function setInputType(type) {
             document.getElementById('inputType').value = type;
         }
-
         function changeColor(button) {
             // Remove the 'active' class from all buttons
             var buttons = document.querySelectorAll('.prompt-buttons button');
             buttons.forEach(function (btn) {
                 btn.classList.remove('active');
             });
-
             // Add the 'active' class to the clicked button
             button.classList.add('active');
         }
@@ -52,7 +47,7 @@
         <!-- Enter Text Input -->
         <div id="div-textarea">
             <label for="form-input-textarea" class="form-label">Input Prompt:</label>
-            <textarea id="form-input-textarea" class="form-control" name="form-textarea" placeholder="Hello World! It's nice to meet you."></textarea>
+            <textarea id="form-input-textarea" class="form-control" name="form-textarea" placeholder="Please enter your text."></textarea>
         </div>
 
         <!-- Move this input inside the form -->
@@ -82,13 +77,10 @@
         {% endif %}
     </main>
 
-
-
     <!-- Bootstrap CDN JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="{{url_for('static', filename='scripts/scripts.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </body>
-
 </html>
