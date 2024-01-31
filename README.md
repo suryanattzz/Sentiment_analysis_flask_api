@@ -38,6 +38,7 @@ This Flask API performs sentiment analysis on various types of text input, inclu
 
 ## Setup
 # 1. Clone the repository
+```bash
 git clone https://github.com/yourusername/Sentiment_analysis_flask_api.git
 cd Sentiment_analysis_flask_api
 
