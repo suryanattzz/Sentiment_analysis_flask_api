@@ -3,43 +3,25 @@
 ## Overview
 This Flask API performs sentiment analysis on various types of text input, including movie reviews, tweets, and generic text. It employs two LSTM models for movie reviews and tweets, along with a machine learning model for generic text analysis.
 
-## Project Structure
 |-- flask_app
-| |-- templates
-| | |-- index.html
-| |-- static
-| | |-- styles
-| | |-- style.css
-| |-- init.py
-| |-- main.py
+|   |-- templates
+|   |   |-- index.html
+|   |-- static
+|   |   |-- styles
+|   |   |   |-- style.css
+|   |-- __init__.py
+|   |-- main.py
 |-- models
-| |-- sentiment_rnn_movie.model
-| |-- sentiment_rnn_tweet.model
-| |-- ml_sentiment_model.pkl
-| |-- run.py
+|   |-- sentiment_rnn_movie.model
+|   |-- sentiment_rnn_tweet.model
+|   |-- ml_sentiment_model.pkl
+|-- run.py
 |-- requirements.txt
 |-- README.md
 
 ## Features
 
-### Text Sentiment Analysis
-1. **Endpoint:** `/sentiment/text`
-   - **Method:** POST
-   - **Parameters:**
-     - `text` (string): The text for sentiment analysis.
-     - `model` (string): Choose between "machine_learning" or "deep_learning" models.
-     - 
-### Movie Review Sentiment Analysis
-2. **Endpoint:** `/sentiment/movie`
-   - **Method:** POST
-   - **Parameters:**
-     - `text` (string): The movie review text for sentiment analysis.
 
-### Tweet Sentiment Analysis
-3. **Endpoint:** `/sentiment/tweet`
-   - **Method:** POST
-   - **Parameters:**
-     - `text` (string): The tweet text for sentiment analysis.
 
 ### File Descriptions
 
