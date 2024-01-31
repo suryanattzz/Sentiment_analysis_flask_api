@@ -16,6 +16,7 @@ This Flask API performs sentiment analysis on various types of text input, inclu
 | |-- sentiment_rnn_movie.model
 | |-- sentiment_rnn_tweet.model
 | |-- ml_sentiment_model.pkl
+| |-- run.py
 |-- requirements.txt
 |-- README.md
 
@@ -36,13 +37,27 @@ This Flask API performs sentiment analysis on various types of text input, inclu
 - **requirements.txt**: File specifying project dependencies.
 
 ## Setup
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/sentiment-analysis-models.git
-cd sentiment-analysis-models
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run the Flask app: `python flask_app/main.py`
-4. Access the API at `http://localhost:5000` in your browser.
+# 1. Clone the repository
+git clone https://github.com/yourusername/Sentiment_analysis_flask_api.git
+cd Sentiment_analysis_flask_api
+
+# 2. Create a virtual environment (optional but recommended)
+
+python3 -m venv venv
+
+
+# 3. Activate the virtual environment
+
+venv\Scripts\activate
+
+# 4. Install dependencies
+pip install -r requirements.txt
+
+# 5. Run the Flask app
+python run.py
+
+# 6. Access the API at http://localhost:5000 in your browser.
+
 
 ## Usage
 1. Choose the type of input: text, movie review, or tweet.
