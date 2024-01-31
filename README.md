@@ -36,9 +36,13 @@ This Flask API performs sentiment analysis on various types of text input, inclu
 - **requirements.txt**: File specifying project dependencies.
 
 ## Setup
-1. Install dependencies: `pip install -r requirements.txt`
-2. Run the Flask app: `python flask_app/main.py`
-3. Access the API at `http://localhost:5000` in your browser.
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/sentiment-analysis-models.git
+cd sentiment-analysis-models
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run the Flask app: `python flask_app/main.py`
+4. Access the API at `http://localhost:5000` in your browser.
 
 ## Usage
 1. Choose the type of input: text, movie review, or tweet.
