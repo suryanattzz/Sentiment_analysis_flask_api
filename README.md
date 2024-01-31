@@ -37,32 +37,52 @@ This Flask API performs sentiment analysis on various types of text input, inclu
 - **requirements.txt**: File specifying project dependencies.
 
 ## Setup
-```bash
-# 1. Clone the repository
-git clone https://github.com/yourusername/Sentiment_analysis_flask_api.git
-cd Sentiment_analysis_flask_api
 
-# 2. Create a virtual environment (optional but recommended)
+### Prerequisites
 
-python3 -m venv venv
+- Python 3.x installed on your machine.
+- [Virtualenv](https://pypi.org/project/virtualenv/) for creating a virtual environment.
+
+### Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/suryanattzz/flask-bank-app.git
+    cd flask-bank-app
+    ```
+2. Create and activate a virtual environment:
+    ```bash
+    virtualenv venv
+    source venv/bin/activate  # For Windows, use `venv\Scripts\activate`
+    ```
+3. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+    
+### Usage
+
+1. Run the Flask app:
+    ```bash
+    python app.py
+    ```
+    
+2. Open your browser and go to [http://localhost:5000/](http://localhost:5000/).
+3. Choose the type of input: text, movie review, or tweet.
+4. Enter the input in the provided text area.
+5. Click "Find Sentiment" to see the sentiment analysis results.
+
+   
+## Screenshots
+
+Include screenshots or gifs showcasing different functionalities of your Flask Bank App.
+
+![Screenshot 1](screenshots/Screenshot_2.png)
+*Home Page Of the App*
+
+![Screenshot 2](screenshots/Screenshot_1.png)
+*Login page of the App
 
 
-# 3. Activate the virtual environment
-
-venv\Scripts\activate
-
-# 4. Install dependencies
-pip install -r requirements.txt
-
-# 5. Run the Flask app
-python run.py
-
-# 6. Access the API at http://localhost:5000 in your browser.
-
-
-## Usage
-1. Choose the type of input: text, movie review, or tweet.
-2. Enter the input in the provided text area.
-3. Click "Find Sentiment" to see the sentiment analysis results.
 
 
