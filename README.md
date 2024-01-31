@@ -20,6 +20,26 @@ This Flask API performs sentiment analysis on various types of text input, inclu
 |-- requirements.txt
 |-- README.md
 
+## Features
+
+### Text Sentiment Analysis
+1. **Endpoint:** `/sentiment/text`
+   - **Method:** POST
+   - **Parameters:**
+     - `text` (string): The text for sentiment analysis.
+     - `model` (string): Choose between "machine_learning" or "deep_learning" models.
+     - 
+### Movie Review Sentiment Analysis
+2. **Endpoint:** `/sentiment/movie`
+   - **Method:** POST
+   - **Parameters:**
+     - `text` (string): The movie review text for sentiment analysis.
+
+### Tweet Sentiment Analysis
+3. **Endpoint:** `/sentiment/tweet`
+   - **Method:** POST
+   - **Parameters:**
+     - `text` (string): The tweet text for sentiment analysis.
 
 ### File Descriptions
 
@@ -37,6 +57,7 @@ This Flask API performs sentiment analysis on various types of text input, inclu
 - **requirements.txt**: File specifying project dependencies.
 
 ## Setup
+Follow these steps to set up and run the API on your local machine.
 
 ### Prerequisites
 
@@ -47,7 +68,7 @@ This Flask API performs sentiment analysis on various types of text input, inclu
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/suryanattzz/flask-bank-app.git
+    git clone https://github.com/suryanattzz/Sentiment_analysis_flask_api.git
     cd flask-bank-app
     ```
 2. Create and activate a virtual environment:
