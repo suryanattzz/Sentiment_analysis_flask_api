@@ -1,9 +1,9 @@
-from flask import render_template, request,session
+from flask import render_template, request
 from keras.utils import pad_sequences
 from flask_app import app
 import tensorflow as tf
 from tensorflow.keras.models import load_model
-import re,pickle,warnings
+import re, pickle, warnings
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 
@@ -77,12 +77,9 @@ def ml_sentiment_model(text, model, vectorizer):
 
     return text, output, predictions[0]
 
-@app.route('/')
 @app.route('/', methods=['GET', 'POST'])
 def index():
     text, sentiment, prediction = None, None, None
-    if 'predictions' not in session:
-        session['predictions'] = []
 
     if request.method == 'POST':
         input_type = request.form['input_type']
@@ -99,7 +96,5 @@ def index():
         elif input_type == 'tweet':
             text, sentiment, prediction = lstm_sentiment_model(request.form['form-textarea'], lstm_model_tweet, tokenizer_tweet, threshold_tweet, maxlen=25)
 
-        session['predictions'] = {'text': text, 'sentiment': sentiment, 'prediction': prediction}
+    return render_template('index.html', text=text, sentiment=sentiment, prediction=prediction)
 
-    stored_prediction = session.get('predictions', {})
-    return render_template('index.html', text=stored_prediction.get('text', ''), sentiment=stored_prediction.get('sentiment', ''), prediction=stored_prediction.get('prediction', ''))
