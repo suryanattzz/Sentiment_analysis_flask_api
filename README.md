@@ -77,7 +77,7 @@ Include screenshots or gifs showcasing different functionalities of your Flask B
 *Home Page Of the App*
 
 ![Screenshot 2](screenshots/Screenshot_1.png)
-*Login page of the App
+*After Text Analysis*
 
 
 
