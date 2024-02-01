@@ -1,6 +1,5 @@
 # Sentiment Analysis Flask API
 
-## Overview
 This Flask API performs sentiment analysis on various types of text input, including movie reviews, tweets, and generic text. It employs two LSTM models for movie reviews and tweets, along with a machine learning model for generic text analysis.
 
 ## Features
